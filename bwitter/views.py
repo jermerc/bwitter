@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 posts = [
     {
@@ -18,9 +18,16 @@ posts = [
 # Create your views here.
 def home(request):
     context = {
-        'posts': posts
+        'posts': posts,
+        'title': 'Bwitter Home'
     }
-    return render(request, 'bwitter/home.html', context)
+    response = render(request, 'bwitter/home.html', context)
+    return response
 
 def about(request):
-    return render(request, 'bwitter/about.html', {'title': 'Bwitter About'})
+    response = render(request, 'bwitter/about.html', {'title': 'Bwitter About'})
+    return response
+
+def redirectHomepage(request):
+    response = redirect('/home/')
+    return response
