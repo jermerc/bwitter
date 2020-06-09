@@ -1,24 +1,10 @@
 from django.shortcuts import render, redirect
-
-posts = [
-    {
-        'author' : 'jermerc',
-        'title' : 'Post 1',
-        'content' : 'Blog Post 1!',
-        'date_posted': 'June 6, 2020'
-    },
-    {
-        'author': 'jermerc',
-        'title' : 'Post 2',
-        'content' : 'Blog Post 2!',
-        'date_posted': 'June 6, 2020'
-    }
-]
+from .models import Post
 
 # Create your views here.
 def home(request):
     context = {
-        'posts': posts,
+        'posts': Post.objects.all(),
         'title': 'Bwitter Home'
     }
     response = render(request, 'bwitter/home.html', context)
