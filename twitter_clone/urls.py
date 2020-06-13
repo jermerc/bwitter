@@ -23,10 +23,13 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('bwitter.urls')),
-    path('register/', user_views.register, name='Register'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='Login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='Logout'),
-    path('profile/', user_views.profile, name='Profile'),
+    path('register/', user_views.register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    path('profile/', user_views.profile, name='profile'),
+    #path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html', name='Password_Reset')),
+    #path('password-reset/', auth_views.PasswordResetView.as_view(template_name='users/password_reset.html', name='Password_Reset')),
+
 ]
 
 if settings.DEBUG:
