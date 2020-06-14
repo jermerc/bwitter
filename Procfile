@@ -1,1 +1,1 @@
-web: gunicorn django-bwitter.wsgi
+web: gunicorn myproject.wsgi
