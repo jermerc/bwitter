@@ -1,2 +1,2 @@
 # bwitter
-Open-source message-sharing application developed using the Django web-framework. 
+Simple open-source message-sharing application developed using the Django web-framework. 
