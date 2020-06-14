@@ -25,7 +25,7 @@ SECRET_KEY = '3xn-+e*4hxk&+cw+e%nno7fwt_!&1wq%a9-3mu&c#ven7*m2k!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django-bwitter.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['django-bwitter.herokuapp.com', 'localhost']
 
 
 # Application definition
