@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 # Create your views here.
+
+# Homepage View containing a list of all the posts.
 def home(request):
     context = {
         'posts': Post.objects.all(),
@@ -13,6 +15,7 @@ def home(request):
     response = render(request, 'bwitter/home.html', context)
     return response
 
+# Simple about page.
 def about(request):
     response = render(request, 'bwitter/about.html', {'title': 'Bwitter About'})
     return response

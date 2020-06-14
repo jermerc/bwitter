@@ -5,6 +5,7 @@ from django.urls import reverse
 
 # Create your models here.
 
+# Create Post model for the database connection.
 class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -14,5 +15,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    # Returns the url for the current post.
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
